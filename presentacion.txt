@@ -1,0 +1,11 @@
+DevsFuturistics
+El equipo de desarrollo DevsFuturistics llevara a cabo durante 7 semanas el desarrollo de una aplicación para controlar las ventas 
+físicas y virtuales de una empresa de manufactura y hacerles el correspondiente seguimiento a estas ventas, para esta aplicación el 
+equipo se vera retado a hacer el respectivo análisis, diseño y construcción de la aplicación. 
+
+A continuación, cada integrante del equipo de desarrollo se presentará:
+-
+-
+-
+-
+-
