@@ -1,0 +1,18 @@
+.container{
+    border: 2px solid gray;
+
+    background-color: #062e3a;
+    color: #fff;
+    padding: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.container-sm{
+    color: rgb(2, 230, 230);
+}
+/* #botoncanelar{
+    position: absolute;left: 25%;
+} */
