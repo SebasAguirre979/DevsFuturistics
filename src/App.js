@@ -7,21 +7,24 @@ import Login from './paginas/auth/login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Registro from './paginas/auth/Registro';
 import AuthLayout from './layouts/AuthLayout';
-
+import Clientes from './paginas/admin/Clientes'
 
 function App() {
   return (
     <div className='App'>
       <Router>
         <Switch>
-          <Route path={['/admin', '/admin/ventas']}>
+          <Route path={['/admin', '/admin/ventas', '/admin/usuarios']}>
             <PrivateLayout>
               <Switch>
-                <Route path='/admin/ventas'>
+                <Route path='/admin/ventas' exact>
                   <Ventas />
                 </Route>
-                <Route path='/admin'>
+                <Route path='/admin' exact>
                   <Admin />
+                </Route>
+                <Route path='/admin/usuarios' exact>
+                  <Clientes />
                 </Route>
               </Switch>
             </PrivateLayout>
@@ -40,11 +43,11 @@ function App() {
           </Route>
           <Route path={['/']}>
             <PublicLayout>
-            
+
               <Route path='/'>
                 <Index />
               </Route>
-            
+
             </PublicLayout>
           </Route>
         </Switch>
