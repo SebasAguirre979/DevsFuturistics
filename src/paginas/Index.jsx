@@ -1,10 +1,13 @@
 import React from 'react';
 
+
 const Index = () => {
   return (
   <div>
     
     Sistema de ventas
+
+    
     
   <br /> 
   <br />
