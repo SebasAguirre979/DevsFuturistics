@@ -9,6 +9,7 @@ import Registro from './paginas/auth/Registro';
 import AuthLayout from './layouts/AuthLayout';
 import Clientes from './paginas/admin/Clientes'
 
+
 function App() {
   return (
     <div className='App'>
