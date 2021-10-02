@@ -2,12 +2,12 @@ import PrivateLayout from './layouts/PrivateLayout';
 import PublicLayout from './layouts/PublicLayout';
 import Index from './paginas/Index';
 import Admin from './paginas/admin/Index';
-import Ventas from './paginas/admin/Ventas';
 import Login from './paginas/auth/login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Registro from './paginas/auth/Registro';
 import AuthLayout from './layouts/AuthLayout';
-import Clientes from './paginas/admin/Clientes'
+import Clientes from './paginas/admin/Clientes';
+import Ventas from './paginas/admin/Ventas';
+
 
 function App() {
   return (
@@ -29,14 +29,11 @@ function App() {
               </Switch>
             </PrivateLayout>
           </Route>
-          <Route path={['/login', '/registro']}>
+          <Route path={['/login']}>
             <AuthLayout>
               <Switch>
                 <Route path='/login'>
                   <Login />
-                </Route>
-                <Route path='/registro'>
-                  <Registro />
                 </Route>
               </Switch>
             </AuthLayout>
