@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './estilos/index.css';
+import './estilos/Adminclient.css';
 import App from './App';
 
 ReactDOM.render(
