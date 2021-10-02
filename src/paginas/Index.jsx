@@ -8,8 +8,10 @@ import jose from '../imagenes/jose.jpeg';
 import camilo from '../imagenes/camilo.jpeg';
 import andres from '../imagenes/andres.jpg';
 
+
 const Index = () => {
   return (
+<<<<<<< HEAD
 
 <div> 
 {/* Area de la imagen principal */}     
@@ -155,6 +157,31 @@ const Index = () => {
 
 </div>
 
+=======
+  <div>
+    
+    Sistema de ventas
+
+    
+    
+  <br /> 
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+ 
+  </div>
+>>>>>>> 103ffbfeb19512ed547ca4fb0731f9a82705c6a0
 );
 };
 

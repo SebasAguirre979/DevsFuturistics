@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AuthLayout from './layouts/AuthLayout';
 import Clientes from './paginas/admin/Clientes';
 import Ventas from './paginas/admin/Ventas';
+import RegProductos from './paginas/admin/Productos'
+
 
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
     <div className='App'>
       <Router>
         <Switch>
-          <Route path={['/admin', '/admin/ventas', '/admin/usuarios']}>
+          <Route path={['/admin', '/admin/ventas', '/admin/usuarios', '/admin/productos']}>
             <PrivateLayout>
               <Switch>
                 <Route path='/admin/ventas' exact>
@@ -25,6 +27,9 @@ function App() {
                 </Route>
                 <Route path='/admin/usuarios' exact>
                   <Clientes />
+                </Route>
+                <Route path='/admin/productos' exact>
+                  <RegProductos/>
                 </Route>
               </Switch>
             </PrivateLayout>
