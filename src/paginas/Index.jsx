@@ -5,13 +5,11 @@ import js from '../imagenes/js.svg';
 import alejo from '../imagenes/alejo.jpg';
 import sebastian from '../imagenes/sebastian.jpeg';
 import jose from '../imagenes/jose.jpeg';
-import camilo from '../imagenes/camilo.jpeg';
 import andres from '../imagenes/andres.jpg';
-
+import camilo from '../imagenes/camilo.jpeg';
 
 const Index = () => {
   return (
-<<<<<<< HEAD
 
 <div> 
 {/* Area de la imagen principal */}     
@@ -79,7 +77,6 @@ const Index = () => {
                 </div>
             </div>
             <div class="col-lg-3">
-
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src={andres} alt="..." />
                     <h4>Andres Gutierrez</h4>
@@ -157,31 +154,6 @@ const Index = () => {
 
 </div>
 
-=======
-  <div>
-    
-    Sistema de ventas
-
-    
-    
-  <br /> 
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
- 
-  </div>
->>>>>>> 103ffbfeb19512ed547ca4fb0731f9a82705c6a0
 );
 };
 
