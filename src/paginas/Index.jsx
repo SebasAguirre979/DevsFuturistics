@@ -2,7 +2,10 @@ import React from 'react';
 import html from '../imagenes/html5.svg';
 import css from '../imagenes/css3.svg';
 import js from '../imagenes/js.svg';
-import alejo from '../imagenes/alejo.jpg'
+import alejo from '../imagenes/alejo.jpg';
+import sebastian from '../imagenes/sebastian.jpeg';
+import jose from '../imagenes/jose.jpeg';
+import usuario from '../imagenes/usuario.svg';
 
 const Index = () => {
   return (
@@ -67,28 +70,28 @@ const Index = () => {
                 </div>
             <div class="col-lg-3">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src={alejo} alt="..." />
+                    <img class="mx-auto rounded-circle" src={usuario} alt="..." />
                     <h4>Camilo Acevedo</h4>
-                    <p class="text-muted">Desarrollador</p>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src={alejo} alt="..." />
-                    <h4>Andres Gutierrez</h4>
                     <p class="text-muted">Analista</p>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src={alejo} alt="..." />
-                    <h4>Jose Ricaurte</h4>
+                    <img class="mx-auto rounded-circle" src={usuario} alt="..." />
+                    <h4>Andres Gutierrez</h4>
+                    <p class="text-muted">Desarrollador</p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src={jose} alt="..." />
+                    <h4>Jose Giraldo</h4>
                     <p class="text-muted">Product Owner</p>
                 </div>
             </div>
             <div class="col-lg-12">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src={alejo} alt="..." />
+                    <img class="mx-auto rounded-circle" src={sebastian} alt="..." />
                     <h4>Sebastián Aguirre</h4>
                     <p class="text-muted">Scrum Master</p>
                 </div>
