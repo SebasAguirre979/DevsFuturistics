@@ -1,15 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Clientes = () => {
   return (
-    
-    
+
+
     <div className="containercam container flex justify-center">
+
+      {/* <div class="text-end">
+        <Link to="/admin">Atras
+        </Link>
+
+      </div> */}
 
       <div className="m-3 text-center text-3xl font-extrabold text-gray-900">
         <h4>Modificación de usuario</h4>
       </div>
-       
+
 
       <div className="formc col-md-4">
         <form className="col-md-12  mt-8 max-w-md flex justify-center" novalidate>
@@ -46,7 +53,9 @@ const Clientes = () => {
           <div className="contbotones col-md-12 " >
             <button className="btn btn-primary " type="submit">Actualizar</button>
             <button className="botone btn btn-primary" id="botonEliminar" type="submit">Eliminar</button>
-            <button className="botone btn btn-primary" id="botonCancelar" type="submit">Cancelar</button>
+            <Link to="/admin"><button className="botone btn btn-primary" id="botonCancelar" type="submit">Cancelar</button>
+            </Link>
+
           </div>
         </form>
 
