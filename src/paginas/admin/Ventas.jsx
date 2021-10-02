@@ -22,4 +22,4 @@ const Ventas = () => {
   </div>;
 };
 
-export default Ventas;  
+export default Ventas; 
