@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="C:\Users\USUARIO\Desktop\proyecto\DevsFuturistics\src\estilos\index.css"/>
+    <title>Ventas</title>
+</head>
+<header class="p-3 bg-white text-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <img src={logo} alt='imagen' height="70" />
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+         <li><Link to="/" class="nav-link px-2 text-primary">Inicio</Link></li>
+          <li><Link to="/Quienes_somos" class="nav-link px-2 text-primary">Quienes somos</Link></li>
+          <li><Link to="/Contactenos" class="nav-link px-2 text-primary">Contactenos</Link></li>
+          
+          
+        </ul>
+
+       <div class="text-end">
+          <Link to="/Login"><button type="button" class="btn-iniciar-sesion btn btn-outline-primary me-2">Login</button>
+          </Link>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+<body>
+    <section> <h1>Crear Ventas</h1> </section>
+    <form>
+        <label for> Ingrese Nombre</label>
+        <input type=name />
+        <label for>Ingrese Identificacion</label>
+        <input type=number />
+        <label for> Correo</label>
+        <input type=email />
+        <label for> Celular</label>
+        <input type=number />
+    </form>
+</body>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div></div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+     
+      <span class="text-muted">&copy; 2021 Dev Futuristics</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><Link to="/">Trello</Link></li>
+      <li class="ms-3"><Link to="/">GitHub</Link></li>
+      <li class="ms-3"><Link to="/">Mintic</Link></li>
+    </ul>
+  </footer>
+</html>

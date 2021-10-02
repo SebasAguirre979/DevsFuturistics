@@ -10,6 +10,7 @@ import Ventas from './paginas/admin/Ventas';
 import RegProductos from './paginas/admin/Productos'
 
 
+
 function App() {
   return (
     <div className='App'>
