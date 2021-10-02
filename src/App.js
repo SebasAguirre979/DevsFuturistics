@@ -5,7 +5,8 @@ import Admin from './paginas/admin/Index';
 import Login from './paginas/auth/login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AuthLayout from './layouts/AuthLayout';
-import Clientes from './paginas/admin/Clientes'
+import Clientes from './paginas/admin/Clientes';
+import Ventas from './paginas/admin/Ventas';
 
 
 function App() {
