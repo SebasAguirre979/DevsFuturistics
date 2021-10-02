@@ -15,6 +15,7 @@ const Ventas = () => {
 <br />
 
 
+
 <br />
 <br />
 <br />
@@ -23,4 +24,4 @@ const Ventas = () => {
   </div>;
 };
 
-export default Ventas;
+export default Ventas;  
