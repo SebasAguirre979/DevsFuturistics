@@ -6,6 +6,7 @@ import alejo from '../imagenes/alejo.jpg';
 import sebastian from '../imagenes/sebastian.jpeg';
 import jose from '../imagenes/jose.jpeg';
 import usuario from '../imagenes/usuario.svg';
+import camilo from '../imagenes/camilo.jpeg';
 
 const Index = () => {
   return (
@@ -70,7 +71,7 @@ const Index = () => {
                 </div>
             <div class="col-lg-3">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src={usuario} alt="..." />
+                    <img class="mx-auto rounded-circle" src={camilo} alt="..." />
                     <h4>Camilo Acevedo</h4>
                     <p class="text-muted">Analista</p>
                 </div>
