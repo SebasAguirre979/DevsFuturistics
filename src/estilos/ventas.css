@@ -3,3 +3,14 @@
     margin-left:15px !important;
     
 }
+.Regresar{
+    position: relative;
+    left: 1000px;
+    color: rgb(29, 182, 118);
+    
+
+
+}
+.container{
+    position: relative;
+}
