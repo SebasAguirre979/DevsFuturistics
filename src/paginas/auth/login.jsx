@@ -1,10 +1,14 @@
 import React from 'react';
-import google from '../../imagenes/google.svg';
 import {useState} from 'react';
 import { useHistory } from 'react-router';
+import { GoogleLogin } from 'react-google-login';
 
 
 const Login = () => {
+
+const responseGoogle = (response) => {
+    console.log(response);
+  }
 
 let history = useHistory();
 
@@ -83,16 +87,22 @@ return (
 
   <div className='flex items-center justify-center'>
     <h2 className='my-4 text-center text-sm font-extrabold text-gray-900'>O</h2>
-  </div>
+  
 
-  <div className='max-w-md w-full'>
-    <button type='submit' className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'>
-      <div className='flex items-center justify-start'>
-        <img src={google} width="40" height="40" alt="arriba"/>
-        <span className='mx-4'>Continúa con Google</span>
-      </div>
-    </button>
-  </div>
+  
+
+      <GoogleLogin
+    clientId="140250298943-84vi56npac5hngnuluabt4ktdq3eeprf.apps.googleusercontent.com"
+    buttonText="Inicia con Google"
+    onSuccess={responseGoogle}
+    onFailure={responseGoogle}
+    cookiePolicy={'single_host_origin'}
+    
+  />,
+ 
+ </div>
+       
+   
 </main>
 
 );
