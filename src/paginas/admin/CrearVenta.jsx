@@ -6,9 +6,9 @@ const CrearVenta = () => {
   
   <div className="container">
   <Link to='/admin/ventas/CrearVenta'>  
-  <button className="btn btn-outline-primary mt-3 mb-3 CrearVenta">Crear nueva venta</button>
+  <button className="btn btn-outline-primary mt-3 mb-3 CrearVenta">Guardar</button>
   </Link>
-  <Link to='/admin'>
+  <Link to='/admin/ventas'>
   <button className="btn btn-outline-primary mt-3 mb-3 Regresar" > Regresar</button>
   </Link >
   <br />
