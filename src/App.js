@@ -8,7 +8,7 @@ import AuthLayout from './layouts/AuthLayout';
 import Clientes from './paginas/admin/Clientes';
 import Ventas from './paginas/admin/Ventas';
 import RegProductos from './paginas/admin/Productos'
-
+import CrearVenta from './paginas/admin/CrearVenta'
 
 
 function App() {
@@ -16,11 +16,14 @@ function App() {
     <div className='App'>
       <Router>
         <Switch>
-          <Route path={['/admin', '/admin/ventas', '/admin/usuarios', '/admin/productos']}>
+          <Route path={['/admin', '/admin/ventas', '/admin/usuarios', '/admin/productos', '/admin/ventas/crearventa',]}>
             <PrivateLayout>
               <Switch>
                 <Route path='/admin/ventas' exact>
                   <Ventas />
+                </Route>
+                <Route path='/admin/ventas/crearventa' exact>
+                  <CrearVenta />
                 </Route>
                 <Route path='/admin' exact>
                   <Admin />
