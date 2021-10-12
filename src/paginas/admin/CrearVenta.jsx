@@ -38,11 +38,18 @@ import { Link } from 'react-router-dom';
                     <input type="date" className="form-control" >
                     </input>          
                 </div>
+         
                 <div className="col-md-4">
-                    <label for="validationDefault01" className="form-label">Productos</label>
-                    <input type="select" className="form-control" >
-                    </input>          
+                <label for="validationCustom04" className="form-label">Productos</label>
+                <select className="form-select" id="validationCustom04" required onChange={(event) => {
+                    }}>
+
+                    <option selected disabled value="">Agregar...</option>
+                    <option>p1</option>
+                    <option>p2</option>
+                    </select>
                 </div>
+                    
             </form>
   <br />
   <br />
