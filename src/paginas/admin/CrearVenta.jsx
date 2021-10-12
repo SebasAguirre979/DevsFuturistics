@@ -53,6 +53,11 @@ import { Link } from 'react-router-dom';
             </form>
 
 
+    <div className="m-3 text-center text-3xl font-extrabold text-gray-1500">
+        <h4>Info Venta</h4>
+        <div className="containercam container flex justify-right">
+
+      </div>
             <div className="contTabla col-md-7 ">
                 <table class="table table-striped">
                 <thead>
@@ -65,6 +70,7 @@ import { Link } from 'react-router-dom';
                     </tr>
                 </thead>
                 </table>
+            </div>
             </div>
   <br />
   <br />
