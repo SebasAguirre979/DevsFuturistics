@@ -38,6 +38,11 @@ import { Link } from 'react-router-dom';
                     <input type="date" className="form-control" >
                     </input>          
                 </div>
+                <div className="col-md-4">
+                    <label for="validationDefault01" className="form-label">Productos</label>
+                    <input type="select" className="form-control" >
+                    </input>          
+                </div>
             </form>
   <br />
   <br />
