@@ -51,6 +51,21 @@ import { Link } from 'react-router-dom';
                 </div>
                     
             </form>
+
+
+            <div className="contTabla col-md-7 ">
+                <table class="table table-striped">
+                <thead>
+                    <tr>
+                    {/* <th scope="col">#</th> */}
+                    <th scope="col">cantidad</th>
+                    <th scope="col">productos</th>
+                    <th scope="col">Valor und</th>
+                    <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                </table>
+            </div>
   <br />
   <br />
   <br />
