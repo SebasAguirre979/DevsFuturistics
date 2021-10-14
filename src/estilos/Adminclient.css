@@ -32,7 +32,21 @@
 }
 
 .contbotones{
-    margin-top: 2%;
+    margin-top: 3%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+    /* border: 2px solid red;
+    background-color:yellow; */
+
+}
+
+.contbotones2{
+    margin-top: 4%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
 
     /* border: 2px solid red;
     background-color:yellow; */
@@ -50,3 +64,13 @@
     margin-left: 4%;
 }
 
+.contdialogbot{
+
+    margin-top: 2%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+   
+   
+}
