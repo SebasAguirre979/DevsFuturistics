@@ -5,6 +5,7 @@ const mysql = require("mysql2");
 
 app.use(express.json());
 app.use(cors());
+app.use('/usuarios', require('./routes/usuarios'))
 
 const db = require("./models");
 
@@ -17,7 +18,7 @@ db.sequelize.sync().then(() => {
 const bd = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "",
+  password: "camilo123",
   database: "devsfuturistics",
 });
 
