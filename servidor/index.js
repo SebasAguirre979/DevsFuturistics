@@ -5,12 +5,12 @@ const mysql = require("mysql2");
 
 app.use(express.json());
 app.use(cors());
-app.use('/usuarios', require('./routes/usuarios'))
+
 
 const db = require("./models");
 
 db.sequelize.sync().then(() => {
-  app.listen(3001, () => {
+  app.listen(5000, () => {
     console.log("Servidor corriendo en el puerto 3001");
   });
 });
@@ -22,15 +22,17 @@ const bd = mysql.createConnection({
   database: "devsfuturistics",
 });
 
-app.post("/create", (req, res) => {
+// // Crea un nuevo usuario
+app.post("/usuarios/newuser", (req, res) => {
   const nombre = req.body.nombre;
+  const cedula = req.body.cedula;
   const email = req.body.email;
-  const password = req.body.password;
+  const pass = req.body.pass;
   const rol = req.body.rol;
   
 bd.query(
-    "INSERT INTO usuarios (nombre, email, password, rol) VALUES (?,?,?,?)",
-    [nombre, email, password, rol],
+    "INSERT INTO usuarios (nombre,cedula, email, pass, rol) VALUES (?,?,?,?,?)",
+    [nombre,cedula, email, pass, rol],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -40,8 +42,8 @@ bd.query(
     }
   );
 });
-
-app.get("/show", (req, res) => {
+//Trae todos los usuarios
+app.get("/usuarios/allusers", (req, res) => {
   bd.query("SELECT * FROM usuarios", (err, result) => {
     if (err) {
       console.log(err);
@@ -50,16 +52,17 @@ app.get("/show", (req, res) => {
     }
   });
 });
-
-app.put("/update", (req, res) => {
-  const id = req.body.id;
+//Actualiza por cedula
+app.patch("/usuarios/update/", (req, res) => {
   const nombre = req.body.nombre;
+  const cedula = req.body.cedula;
   const email = req.body.email;
-  const password = req.body.password;
+  const pass = req.body.pass;
   const rol = req.body.rol;
+  const cedulaB = req.body.cedulaB
   bd.query(
-    "UPDATE usuarios SET nombre = ?, email = ?, password = ?, rol = ?  WHERE id = ?",
-    [nombre, email, password, rol, id],
+    "UPDATE usuarios SET nombre = ?, cedula = ?, email = ?, pass = ?, rol = ?  WHERE cedula = ?",
+    [nombre,cedula, email, pass, rol, cedulaB],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -69,10 +72,10 @@ app.put("/update", (req, res) => {
     }
   );
 });
-
-app.delete("/delete/:id", (req, res) => {
-  const id = req.params.id;
-  bd.query("DELETE FROM usuarios WHERE id = ?", id, (err, result) => {
+// Elimina un usuario por numero de cedula
+app.delete("/usuarios/deleteuser", (req, res) => {
+  const cedulaB = req.body.cedulaB
+  bd.query("DELETE FROM usuarios WHERE cedula = ?", cedulaB, (err, result) => {
     if (err) {
       console.log(err);
     } else {
