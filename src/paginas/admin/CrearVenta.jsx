@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
       
   
   <div className="container">
-  <Link to='/admin/ventas/CrearVenta'>  
-  <button className="btn btn-outline-primary mt-3 mb-3 CrearVenta">Guardar</button>
-  </Link>
+
   <Link to='/admin/ventas'>
   <button className="btn btn-outline-primary mt-3 mb-3 Regresar" > Regresar</button>
   </Link >
@@ -50,6 +48,8 @@ import { Link } from 'react-router-dom';
                     </select>
                 </div>
                     
+                <button type='button' className="btn btn-outline-primary mt-3 mb-3 CrearVenta">Guardar</button>
+
             </form>
 
 
