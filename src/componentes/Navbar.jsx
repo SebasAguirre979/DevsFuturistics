@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../imagenes/logo.png';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
+
+  const { loginWithRedirect } = useAuth0();
+
   return (
     
   <header class="p-3 bg-white text-dark" id="arriba">
@@ -16,7 +20,9 @@ const Navbar = () => {
         </ul>
 
         <div class="text-end">
-          <Link to="/Login"><button type="button" class="btn-iniciar-sesion btn btn-outline-primary me-2">Login</button></Link>
+  {/*        <Link to="/Login">   */}
+            <button type="button" class="btn-iniciar-sesion btn btn-outline-primary me-2" onClick={() => loginWithRedirect()} >Login</button>
+  {/*           </Link>     */}
         </div>
       </div>
     </div>

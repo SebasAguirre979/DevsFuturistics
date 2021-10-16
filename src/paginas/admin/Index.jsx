@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RegistrarPNG from '../../imagenes/Registrar.png';
 
+
 const Admin = () => {
+  
   return (
     <div className='flex w-screen h-screen'>
       <div class="text-center">

@@ -8,15 +8,23 @@ import AuthLayout from './layouts/AuthLayout';
 import Clientes from './paginas/admin/Clientes';
 import Ventas from './paginas/admin/Ventas';
 import RegProductos from './paginas/admin/Productos'
-
+import { Auth0Provider } from "@auth0/auth0-react";
 
 
 function App() {
   return (
+
+    <Auth0Provider
+    domain="devs-futuristics.us.auth0.com"
+    clientId="AfabyCnU3Xpon84gx8uN2vLYOVNQawLb"
+    redirectUri={"http://localhost:3000/admin"}
+    audience= 'api-autenticacion-devsfuturistics'
+    >
+
     <div className='App'>
       <Router>
         <Switch>
-          <Route path={['/admin', '/admin/ventas', '/admin/usuarios', '/admin/productos']}>
+          <Route path={['/admin','/admin/ventas', '/admin/usuarios', '/admin/productos']}>
             <PrivateLayout>
               <Switch>
                 <Route path='/admin/ventas' exact>
@@ -55,6 +63,8 @@ function App() {
         </Switch>
       </Router>
     </div>
+
+    </Auth0Provider>
   );
 }
 
