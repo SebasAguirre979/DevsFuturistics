@@ -10,89 +10,96 @@ import Ventas from './paginas/admin/Ventas';
 import RegProductos from './paginas/admin/Productos'
 import ProtectedRoute from './componentes/ProtectedRoute';
 import Pendiente from "./componentes/pendiente/Pendiente";
+import CrearVenta from './paginas/admin/CrearVenta';
 
 import { UserContext } from './context/userContext';
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import PrivateRoute from './componentes/PrivateRoute';
 
 function App() {
   const [userData, setUserData] = useState({});
   return (
 
-    
+
     <div className='App'>
       <UserContext.Provider value={{ userData, setUserData }}>
-      <Router>
-        <Switch>
-          <Route path={['/admin','/admin/ventas', '/admin/usuarios', '/admin/productos']}>
-          
-            <PrivateLayout>
-              <Switch>
-                
+        <Router>
+          <Switch>
+            <Route path={['/admin', '/admin/ventas', '/admin/usuarios', '/admin/productos']}>
+
+              <PrivateLayout>
+                <Switch>
+
                   <Route path='/admin/ventas' exact>
-                <PrivateRoute roleList={["Administrador","Usuario"]}>
-                    <Ventas />
-                </PrivateRoute>    
+                    <PrivateRoute roleList={["Administrador", "Usuario"]}>
+                      <Ventas />
+                    </PrivateRoute>
                   </Route>
-                              
+
+                  <Route path='/admin/ventas/crearventa' exact>
+                    <PrivateRoute roleList={["Administrador", "Usuario"]}>
+                    <CrearVenta />
+                    </PrivateRoute>
+                  </Route>
+
                   <Route path='/admin/usuarios' exact>
-                <PrivateRoute roleList={["Administrador"]}>
-                    <Clientes />
-                </PrivateRoute>
+                    <PrivateRoute roleList={["Administrador"]}>
+                      <Clientes />
+                    </PrivateRoute>
                   </Route>
-                
+
                   <Route path='/admin/productos' exact>
-                <PrivateRoute roleList={["Administrador"]}>
-                    <RegProductos/>
-                </PrivateRoute>
+                    <PrivateRoute roleList={["Administrador"]}>
+                      <RegProductos />
+                    </PrivateRoute>
                   </Route>
-                
-                <PrivateRoute roleList={["Administrador","Usuario"]}>
-                <ProtectedRoute path='/admin' exact component={Admin} />
-                </PrivateRoute> 
 
-              </Switch>
-            </PrivateLayout>
-            
-          </Route>
-          <Route path={['/login']}>
-            <AuthLayout>
-              <Switch>
-                <Route path='/login'>
-                  <Login />
+                  <PrivateRoute roleList={["Administrador", "Usuario"]}>
+                    <ProtectedRoute path='/admin' exact component={Admin} />
+                  </PrivateRoute>
+
+                </Switch>
+              </PrivateLayout>
+
+            </Route>
+            <Route path={['/login']}>
+              <AuthLayout>
+                <Switch>
+                  <Route path='/login'>
+                    <Login />
+                  </Route>
+                </Switch>
+              </AuthLayout>
+            </Route>
+
+            <Route path={['/pendiente']}>
+              <AuthLayout>
+                <Switch>
+                  <Route path='/pendiente'>
+                    <Pendiente />
+                  </Route>
+                </Switch>
+              </AuthLayout>
+            </Route>
+
+            <Route path={['/']}>
+              <PublicLayout>
+
+                <Route path='/'>
+                  <Index />
                 </Route>
-              </Switch>
-            </AuthLayout>
-          </Route>
 
-          <Route path={['/pendiente']}>
-            <AuthLayout>
-              <Switch>
-                <Route path='/pendiente'>
-                  <Pendiente />
-                </Route>
-              </Switch>
-            </AuthLayout>
-          </Route>
+              </PublicLayout>
 
-          <Route path={['/']}>
-            <PublicLayout>
+            </Route>
 
-              <Route path='/'>
-                <Index />
-              </Route>
 
-            </PublicLayout>
-
-          </Route>
-       
-         
-        </Switch>
-      </Router>
+          </Switch>
+        </Router>
       </UserContext.Provider>
     </div>
 
-    
+
   );
 }
 
