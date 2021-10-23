@@ -5,9 +5,19 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+
+      codigobarras: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       
       valor: {
         type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+
+      estado: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
       

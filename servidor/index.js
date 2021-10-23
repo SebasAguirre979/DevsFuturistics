@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors());
 app.use('/usuarios', require('./routes/usuarios'))
+app.use('/productos', require('./routes/productos'))
 //app.use('/usuarios', require('../src/paginas/auth/routes'))
 
 const db = require("./models");
