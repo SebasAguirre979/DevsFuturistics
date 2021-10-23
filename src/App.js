@@ -10,6 +10,7 @@ import Ventas from './paginas/admin/Ventas';
 import RegProductos from './paginas/admin/Productos'
 import ProtectedRoute from './componentes/ProtectedRoute';
 import Pendiente from "./componentes/pendiente/Pendiente";
+import CrearVenta from './paginas/admin/CrearVenta';
 
 
 
@@ -27,6 +28,9 @@ function App() {
               <Switch>
                 <Route path='/admin/ventas' exact>
                   <Ventas />
+                </Route>
+                <Route path='/admin/ventas/crearventa' exact>
+                  <CrearVenta />
                 </Route>
                 <ProtectedRoute path='/admin' exact component={Admin} />
                   
