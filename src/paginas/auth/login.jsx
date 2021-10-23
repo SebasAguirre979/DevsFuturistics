@@ -3,9 +3,14 @@ import { useHistory } from 'react-router';
 import { GoogleLogin } from 'react-google-login';
 import cookie from 'react-cookies';
 import logo from '../../imagenes/logo.png';
+import { useUser } from '../../context/userContext';
+
+
 
 
 const Login = () => {
+
+  const { setUserData} = useUser();
 
 const responseGoogle = async (response) => {
   console.log('responseGoogle', response);
@@ -36,7 +41,9 @@ const responseGoogle = async (response) => {
           const content = await user.json();
           console.log('+++++++++++++++++++', content.user.rol);
 
-          if (content.user.rol === 'Administrador') {
+          setUserData(content.user.rol);
+          
+          if (content.user.rol === 'Administrador' || content.user.rol === 'Usuario') {
               history.push('/admin')
               return;
           }

@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+
 const Ventas = () => {
   return <div>
     
-
-<div className="container">
+<div className="container"> 
 <button className="btn btn-outline-primary mt-3 mb-3 CrearVenta">Crear nueva venta</button>
 <Link to='/admin'>
 <button className="btn btn-outline-primary mt-3 mb-3 Regresar" > Regresar</button>

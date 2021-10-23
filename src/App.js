@@ -11,32 +11,46 @@ import RegProductos from './paginas/admin/Productos'
 import ProtectedRoute from './componentes/ProtectedRoute';
 import Pendiente from "./componentes/pendiente/Pendiente";
 
-
-
+import { UserContext } from './context/userContext';
+import React, { useState} from 'react';
+import PrivateRoute from './componentes/PrivateRoute';
 
 function App() {
+  const [userData, setUserData] = useState({});
   return (
 
     
     <div className='App'>
+      <UserContext.Provider value={{ userData, setUserData }}>
       <Router>
         <Switch>
           <Route path={['/admin','/admin/ventas', '/admin/usuarios', '/admin/productos']}>
-            
+          
             <PrivateLayout>
               <Switch>
-                <Route path='/admin/ventas' exact>
-                  <Ventas />
-                </Route>
+                
+                  <Route path='/admin/ventas' exact>
+                <PrivateRoute roleList={["Administrador","Usuario"]}>
+                    <Ventas />
+                </PrivateRoute>    
+                  </Route>
+                              
+                  <Route path='/admin/usuarios' exact>
+                <PrivateRoute roleList={["Administrador"]}>
+                    <Clientes />
+                </PrivateRoute>
+                  </Route>
+                
+                  <Route path='/admin/productos' exact>
+                <PrivateRoute roleList={["Administrador"]}>
+                    <RegProductos/>
+                </PrivateRoute>
+                  </Route>
+                
+                <PrivateRoute roleList={["Administrador","Usuario"]}>
                 <ProtectedRoute path='/admin' exact component={Admin} />
-                  
-            
-                <Route path='/admin/usuarios' exact>
-                  <Clientes />
-                </Route>
-                <Route path='/admin/productos' exact>
-                  <RegProductos/>
-                </Route>
+                </PrivateRoute> 
+
               </Switch>
             </PrivateLayout>
             
@@ -75,6 +89,7 @@ function App() {
          
         </Switch>
       </Router>
+      </UserContext.Provider>
     </div>
 
     
