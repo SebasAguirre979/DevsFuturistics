@@ -5,7 +5,7 @@ const Ventas = () => {
   return <div>
     
 <div> 
-  <h1>INGRESA A CREAR VENTA /PAGINA EN CONSTRUCION.</h1>
+  <h1>INGRESA A CREAR NUEVA VENTA /PAGINA EN CONSTRUCION.</h1>
 </div>
 <div className="container">
 <Link to='/admin/ventas/CrearVenta'>  
