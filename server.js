@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const cors = require("cors");
+var cors = require("cors");
 
 //const sequelize = require('./database/db');
 // const Product = require('./database/models/Product');
@@ -10,7 +10,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 5000;
 
 //middleWare
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors());
 app.use('/usuarios', require('./routes/usuarios'))
