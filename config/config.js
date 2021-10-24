@@ -3,7 +3,7 @@ require('dotenv').config();
 
 module.exports = {
     username: "sql10446405",
-    password: "QPYbM5iHFK",
+    password: process.env.DB_PASS || "QPYbM5iHFK",
     database: "sql10446405",
     host: process.env.DB_HOST || "sql10.freesqldatabase.com",
     dialect: "mysql",
