@@ -2,10 +2,10 @@ require('dotenv').config();
 
 
 module.exports = {
-    username: "sql10446405" || "root",
-    password: "QPYbM5iHFK" || "root",
-    database: "sql10446405" || "devsfuturistics",
-    host: process.env.DB_HOST || "127.0.0.1",
+    username: "sql10446405",
+    password: "QPYbM5iHFK",
+    database: "sql10446405",
+    host: process.env.DB_HOST || "sql10.freesqldatabase.com",
     dialect: "mysql",
     /* define: {
       timestamps: false,
