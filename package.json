@@ -7,7 +7,13 @@
     "start": "node index.js"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env = jsdom ",
+    " eject ": " react-scriptseject ",
+    " heroku-postbuild ": " npm run build "
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +24,7 @@
     "mysql2": "^2.3.2",
     "nodemon": "^2.0.13",
     "sequelize": "^6.7.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "serve": "^12.0.1"
   }
 }
