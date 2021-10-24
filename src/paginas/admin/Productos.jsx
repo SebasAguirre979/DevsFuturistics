@@ -68,7 +68,7 @@ const Productos = () => {
 
         const options = {
             method: 'DELETE',
-            url: 'http://localhost:5000/productos/deleteproduct',
+            url: 'https://shielded-taiga-93536.herokuapp.com/productos/deleteproduct',
             headers: { 'Content-Type': 'application/json' },
             data: datosProductoAEliminar
         };
@@ -135,7 +135,7 @@ const Productos = () => {
     function actualizarDatosTabla() {
         const options = {
             method: 'GET',
-            url: 'http://localhost:5000/productos/allproducts',
+            url: 'https://shielded-taiga-93536.herokuapp.com/productos/allproducts',
             headers: { 'Content-Type': 'application/json' }
         };
 
@@ -167,7 +167,7 @@ const Productos = () => {
             console.log("Cambios del usuario", datosProductosAActualizar)
             const options = {
                 method: 'PATCH',
-                url: 'http://localhost:5000/productos/updateproduct',
+                url: 'https://shielded-taiga-93536.herokuapp.com/productos/updateproduct',
                 headers: { 'Content-Type': 'application/json' },
                 data: datosProductosAActualizar
             };
@@ -250,7 +250,7 @@ const Productos = () => {
 
             const options = {
                 method: 'POST',
-                url: 'http://localhost:5000/productos/newproduct',
+                url: 'https://shielded-taiga-93536.herokuapp.com/productos/newproduct',
                 headers: { 'Content-Type': 'application/json' },
                 data: nuevoproducto
             };

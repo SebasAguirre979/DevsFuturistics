@@ -64,7 +64,7 @@ const Clientes = () => {
 
     const options = {
       method: 'DELETE',
-      url: 'http://localhost:5000/usuarios/deleteuser',
+      url: 'https://shielded-taiga-93536.herokuapp.com/usuarios/deleteuser',
       headers: { 'Content-Type': 'application/json' },
       data: userdel
     };
@@ -93,7 +93,7 @@ const Clientes = () => {
     console.log("Cambios del usuario", userupdate)
     const options = {
       method: 'PATCH',
-      url: 'http://localhost:5000/usuarios/update/',
+      url: 'https://shielded-taiga-93536.herokuapp.com/usuarios/update/',
       headers: { 'Content-Type': 'application/json' },
       data: userupdate
     };
@@ -120,7 +120,7 @@ const Clientes = () => {
   function actualizarDatosback() {
     const options = {
       method: 'GET',
-      url: 'http://localhost:5000/usuarios/allusers',
+      url: 'https://shielded-taiga-93536.herokuapp.com/usuarios/allusers',
       headers: { 'Content-Type': 'application/json' }
     };
 
@@ -149,7 +149,7 @@ const Clientes = () => {
       console.log("Cambios del usuario", userupdate)
       const options = {
         method: 'PATCH',
-        url: 'http://localhost:5000/usuarios/update/',
+        url: 'https://shielded-taiga-93536.herokuapp.com/usuarios/update/',
         headers: { 'Content-Type': 'application/json' },
         data: userupdate
       };
@@ -293,7 +293,7 @@ const Clientes = () => {
 
       const options = {
         method: 'POST',
-        url: 'http://localhost:5000/usuarios/newuser',
+        url: 'https://shielded-taiga-93536.herokuapp.com/usuarios/newuser',
         headers: { 'Content-Type': 'application/json' },
         data: nuevousuario
       };
