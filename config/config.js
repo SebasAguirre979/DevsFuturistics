@@ -7,12 +7,12 @@ module.exports = {
     database: "sql10446405",
     host: process.env.DB_HOST || "sql10.freesqldatabase.com",
     dialect: "mysql",
-    /* define: {
+    define: {
       timestamps: false,
 
       // Genera claves foraneas de este tipo user_id en vez de userId
       underscored: true
-    }  */
+    } 
   }
 
 
